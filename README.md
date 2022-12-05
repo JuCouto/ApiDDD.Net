@@ -5,9 +5,9 @@ Api com Identity,JWT, AutoMapper, DDD, TDD Token. Curso Dev Net Core - Valdir Fe
 ___________________________________________________________________
 ### Resumo das aulas:
 
-Aula 1 (somente introdução)
+#### Aula 1 (somente introdução)
 
-Aula 2 
+#### Aula 2 
 
 Criação das pastas e dos projetos.
 (1-Api, 2- Domain, 3- Infra, 4- Entities, 5- teste)
@@ -17,7 +17,7 @@ Entidades e Enums
 * No projeto entities instalar pacote:
 Microsogt.Extensions.Identity.Stores
 
-Aula 3
+#### Aula 3
 
 Domain/ interfaces/Generics e interfaceServices
 
@@ -37,6 +37,43 @@ Instalar pacote do banco de dados (instalei do postgres)
                   builder.Entity<ApplicationUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
                   base.OnModelCreating(builder);
               }
+              
+#### Aula 4
+
+criou projeto webapi
+models - login, MessageViewModels
+
+token - classes para administrar e criar o token
+
+configurações no program
+
+todas com -- foram adicionadas
+
+pacotes :
+* Microsoft.AspNetCore.Authentication.JwtBeare
+* Microsoft.AspNetCore.Identity.UI
+* Microsoft.EntityFrameworkCore.Tools
+* Microsoft.EntityFrameworkCore.Design
+* AutoMapper versão 11.0.1
+
+adicionou conf BD appsettings.json
+
+
+#### Aula 5
+
+usercontroller - método autenticar usuario(criarToken)
+* selecionar o webapi como projeto de inicialização
+* no console gerenciador de pacotes/ no projeto padrão selecionar o infra
+ instalar:
+ Add-Migration Inicial_dev_net -Context ContextBase (informar qual a classe do contexto utilizado)
+
+Para gerar no banco de dados:
+
+Update-Database -Context ContextBase
+
+*criar conexão com o banco de dados no dbeaver
+
+*o identity já tem regras para criação de senha de alta segurança.
 ___________________________________________________________________
 ## Anotações para banco de dados:
 
