@@ -74,6 +74,18 @@ Update-Database -Context ContextBase
 *criar conexão com o banco de dados no dbeaver
 
 *o identity já tem regras para criação de senha de alta segurança.
+
+#### Aula 6
+
+MessageController
+Testando pelo thunder client.
+
+criar projeto teste (projeto de teste MSteste)
+
+Para realizar teste o projeto de api precisa estar em execução.
+ primeiro roda o projeto com a api, abre o projeto de teste em outro visual studio.
+ 
+ Clica em cima do método e seleciona executar e testar ( ctrl + R, T).
 ___________________________________________________________________
 ## Anotações para banco de dados:
 
