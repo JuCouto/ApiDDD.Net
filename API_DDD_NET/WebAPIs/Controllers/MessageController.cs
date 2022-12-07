@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Interfaces;
+using Domain.Interfaces.InterfaceServices;
 using Entities.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -14,11 +15,13 @@ namespace WebAPIs.Controllers
     {
         private readonly IMapper _IMapper;
         private readonly IMessage _IMessage;
+        private readonly IServiceMessage _serviceMessage;
 
-        public MessageController(IMapper IMapper, IMessage IMessage)
+        public MessageController(IMapper IMapper, IMessage IMessage, IServiceMessage IServiceMessage)
         {
             _IMapper = IMapper;
             _IMessage = IMessage;
+            _serviceMessage = IServiceMessage;
         }
 
         [Authorize] // Só consegue chamar esse endpoint quem tiver autorização.
@@ -28,7 +31,7 @@ namespace WebAPIs.Controllers
         {
             message.UserId = await RetornarIdUsuarioLogado();
             var messageMap = _IMapper.Map<Message>(message);
-            await _IMessage.Add(messageMap);
+            await _serviceMessage.Adicionar(messageMap);
             return messageMap.Notifications;
         }
 
@@ -38,7 +41,7 @@ namespace WebAPIs.Controllers
         public async Task<List<Notifies>> Update(MessageViewModel message)
         {
             var messageMap = _IMapper.Map<Message>(message);
-            await _IMessage.Update(messageMap);
+            await _serviceMessage.Atualizar(messageMap);
             return messageMap.Notifications;
         }
 
@@ -73,7 +76,15 @@ namespace WebAPIs.Controllers
         }
 
 
-
+        [Authorize]
+        [Produces("application/json")]
+        [HttpPost("/api/ListarMessageAtiva")]
+        public async Task<List<MessageViewModel>> ListarMessageAtiva()
+        {
+            var mensagens = await _serviceMessage.ListarMenssagemAtiva();
+            var messageMap = _IMapper.Map<List<MessageViewModel>>(mensagens);
+            return messageMap;
+        }
         private async Task<string> RetornarIdUsuarioLogado()
         {
             if (User != null)
