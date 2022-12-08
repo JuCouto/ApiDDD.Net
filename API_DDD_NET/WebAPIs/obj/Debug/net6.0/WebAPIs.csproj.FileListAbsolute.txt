@@ -69,3 +69,4 @@ C:\C#\APIDDD2022NET\API_DDD_NET\WebAPIs\bin\Debug\net6.0\System.CodeDom.dll
 C:\C#\APIDDD2022NET\API_DDD_NET\WebAPIs\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\C#\APIDDD2022NET\API_DDD_NET\WebAPIs\bin\Debug\net6.0\System.Text.Json.dll
 C:\C#\APIDDD2022NET\API_DDD_NET\WebAPIs\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\C#\APIDDD2022NET\API_DDD_NET\WebAPIs\bin\Debug\net6.0\Newtonsoft.Json.dll
