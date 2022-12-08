@@ -108,7 +108,8 @@ if (app.Environment.IsDevelopment())
 
 
 // Forma 2, para utilizar o Cors. --
-var devClient = "http://localhost:4200";
+//var devClient = "http://localhost:4200";
+var devClient = "http://localhost:3000"; //porta react
 app.UseCors(x => x
     .AllowAnyOrigin()
     .AllowAnyMethod()

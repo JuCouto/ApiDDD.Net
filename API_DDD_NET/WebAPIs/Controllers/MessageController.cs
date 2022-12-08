@@ -24,7 +24,7 @@ namespace WebAPIs.Controllers
             _serviceMessage = IServiceMessage;
         }
 
-        [Authorize] // Só consegue chamar esse endpoint quem tiver autorização.
+        //[Authorize] // Só consegue chamar esse endpoint quem tiver autorização.
         [Produces("application/json")]
         [HttpPost("/api/Add")]
         public async Task<List<Notifies>> Add(MessageViewModel message)
@@ -65,7 +65,8 @@ namespace WebAPIs.Controllers
             return messageMap;
         }
 
-        [Authorize]
+        //[Authorize]
+        [AllowAnonymous]
         [Produces("application/json")]
         [HttpPost("/api/List")]
         public async Task<List<MessageViewModel>> List()
@@ -87,6 +88,7 @@ namespace WebAPIs.Controllers
         }
         private async Task<string> RetornarIdUsuarioLogado()
         {
+            return "49545b3b-e0c8-4883-8a46-dac5495772c6"; // simulando usuario logado
             if (User != null)
             {
                 var idUsuario = User.FindFirst("idUsuario");
