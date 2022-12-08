@@ -86,6 +86,31 @@ Para realizar teste o projeto de api precisa estar em execução.
  primeiro roda o projeto com a api, abre o projeto de teste em outro visual studio.
  
  Clica em cima do método e seleciona executar e testar ( ctrl + R, T).
+ 
+ #### Aula 7 
+ 
+ IserviceMessage
+serviceMessage
+MessageController
+
+
+#### Aula 8
+
+consumir api externa
+
+* Pacote:
+newtonjson
+
+entitiesexternal/ produto
+
+domain interfacesexternal/iproduto
+
+infraestructure repositoriesexternal/respositoryproduto
+
+webapi controller/produtocontroller
+
+program builder.Services.AddSingleton<IProduto, RepositoryProduto>();
+
 ___________________________________________________________________
 ## Anotações para banco de dados:
 
@@ -104,5 +129,10 @@ modelo para conexão Postgres --> optionsBuilder.UseNpgsql(ObterStringConexao())
 
      public virtual ApplicationUser ApplicationUser { get; set; }
 ___________________________________________________________________
+Repositório da API externa que foi utilizada:
+
+https://github.com/ValdirFerreira/API-NODE.JS-MVC-com-SQL-Server
+
+_____________________________________________________________________
 Curso Dev Net Core - Valdir Ferreira Youtube
 https://www.youtube.com/watch?v=eBqV9Vc8zoo&list=PLP8qOphXwRnIOzXzoviI5xwxcc4-dV_pd&index=3
