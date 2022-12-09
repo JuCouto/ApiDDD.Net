@@ -1,6 +1,6 @@
 # ApiDDD.Net
 Api com Identity,JWT, AutoMapper, DDD, TDD Token. Curso Dev Net Core - Valdir Ferreira Youtube
-
+*Adicionado projeto em react consumindo a API.
 ** Utilizei o Banco de dados Postgres
 ___________________________________________________________________
 ### Resumo das aulas:
@@ -110,7 +110,29 @@ infraestructure repositoriesexternal/respositoryproduto
 webapi controller/produtocontroller
 
 program builder.Services.AddSingleton<IProduto, RepositoryProduto>();
+______________________________________________________________________
+### React
 
+modificar permissão messageController list para allowanonimous
+program mudar o local host para 3000
+
+no visualcode iniciar projeto:
+
+ npx create-react-app nomedoprojeto
+
+abrir a pasta do projeto criado
+
+src/services/api.js arquivo para chamar a url
+
+* pacote:
+npm i axios
+
+pages/list-index.jsx
+
+routes/index.jsx
+
+* pacote:
+npm i react-router-dom
 ___________________________________________________________________
 ## Anotações para banco de dados:
 
