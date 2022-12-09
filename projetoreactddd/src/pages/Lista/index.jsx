@@ -26,6 +26,7 @@ export const Lista = () => {
       <div className="container">
         {mensagens.map(item => (
           <div className="container-mensagem">
+            <div className='seta-mensagem'> </div>
               <div className="base-mensagem" key={item.Id}>{item.id} - {item.titulo} </div>
           </div>
         ))}

@@ -29,7 +29,7 @@ export const Cadastro = () =>{
 
     return (
         <div className="container">
-                <h1>Cadastro</h1>
+                <h1 className='titulo'>Cadastro</h1>
                 <form onSubmit={handleSubmit}>
                     <input className="input-text" type="text" value={titulo}
                     onChange={(e) => setTitulo(e.target.value)}/>
