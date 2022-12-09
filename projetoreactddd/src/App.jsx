@@ -1,32 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { AppRouter } from './routes';
 
-import React, {userState, useEffect, useState} from 'react'
-import api from './Services/api'
-
-
-
-
-export default function App()
+export const App = () =>
 {
-  const [mensagens, setMensagens] = useState([]);
-
-  useEffect(() =>{
-    api.post('List').then(({data}) =>
-    {
-      setMensagens(data)
-    })
-  })
-
-  return (
-<div className="App">
-<header className= "App-header">
-{mensagens.map(item =>
-(
-<div key={item.id}>{item.id} - {item.titulo}</div>
-)
-)}
-</header>
-</div>
+  return(
+    <AppRouter/>
   );
 }
