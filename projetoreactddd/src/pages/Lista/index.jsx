@@ -28,9 +28,14 @@ export const Lista = () => {
           <div className="container-mensagem">
             <div className='seta-mensagem'> </div>
               <div className="base-mensagem" key={item.Id}>{item.id} - {item.titulo} </div>
+          
           <Link className="btn-editar" 
-          to={{pathname:"edicao/"+ item.id}}>
+            to={{pathname:"edicao/"+ item.id}}>
             Editar</Link>
+
+            <Link className="btn-deletar" 
+             to={{pathname:"deletar/"+ item.id}}>
+             Excluir</Link>
           </div>
         ))}
       </div>
