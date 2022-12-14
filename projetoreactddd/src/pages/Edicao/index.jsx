@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import api from "../../Services/api.js";
 
-export const Cadastro = () =>{
+export const Edicao = () =>{
 
     let navigate = useNavigate();
 

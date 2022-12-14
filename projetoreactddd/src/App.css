@@ -31,7 +31,8 @@
   font-weight: 600;
 }
 
-.btn-criar {
+.btn-criar,
+.btn-voltar, .btn-editar {
   height: 40px;
   width: 250px;
   padding: 8px;
@@ -74,4 +75,21 @@
 .titulo
 {
   margin: auto;
+}
+
+.btn-voltar
+{
+  height: 35px;
+  width: 90px;
+  padding: 8px;
+  background: gray;
+  margin-top: 8px;
+}
+
+.btn-editar
+{
+  height: 30px;
+  width: 40px;
+  margin:4px 0px 0px 8px;
+  font-weight: 400;
 }
