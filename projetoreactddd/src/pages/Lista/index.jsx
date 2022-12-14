@@ -2,7 +2,7 @@
 import "../../App.css";
 import { Link } from "react-router-dom";
 
-import React, { userState, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import api from "../../Services/api.js";
 
 export const Lista = () => {
