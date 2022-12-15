@@ -154,6 +154,9 @@ modelo para conexão Postgres --> optionsBuilder.UseNpgsql(ObterStringConexao())
 ### Ao utilizar banco de dados postgres, se utilizar alguma propriedade de DateTime, e necessário adicionar no program:
 
 *AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+#### ConnectionString Postgres:
+Server=127.0.0.1;Port=5432;Database=IWantDb;User Id=postgres; Password=
 ___________________________________________________________________
 Repositório da API externa que foi utilizada:
 
