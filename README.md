@@ -150,6 +150,10 @@ modelo para conexão Postgres --> optionsBuilder.UseNpgsql(ObterStringConexao())
     public string UserId { get; set; }
 
      public virtual ApplicationUser ApplicationUser { get; set; }
+     
+### Ao utilizar banco de dados postgres, se utilizar alguma propriedade de DateTime, e necessário adicionar no program:
+
+*AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 ___________________________________________________________________
 Repositório da API externa que foi utilizada:
 
