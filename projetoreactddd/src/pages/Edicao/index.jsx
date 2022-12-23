@@ -50,7 +50,7 @@ export const Edicao = () =>{
 
         alert("Mensagem alterada com sucesso");
         setTitulo(""); // para limpar no final
-        navigate('/'); // vai buscar a rota criada no path do routes.
+        navigate('/Lista'); // vai buscar a rota criada no path do routes.
     };
 
     return (
@@ -62,7 +62,7 @@ export const Edicao = () =>{
                      <button className="btn-criar" type='submit'>
                     Salvar Edição
                 </button>
-                <Link className="btn-voltar" to='/'>Voltar</Link>
+                <Link className="btn-voltar" to='/Lista'>Voltar</Link>
                 </form>
 
                

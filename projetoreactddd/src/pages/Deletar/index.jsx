@@ -49,7 +49,7 @@ export const Deletar = () =>{
 
         alert("Mensagem deletada com sucesso");
         setTitulo(""); // para limpar no final
-        navigate('/'); // vai buscar a rota criada no path do routes.
+        navigate('/Lista'); // vai buscar a rota criada no path do routes.
     };
 
     return (
@@ -64,7 +64,7 @@ export const Deletar = () =>{
                     Deletar
                 </button>
 
-                <Link className="btn-voltar" to='/'>Cancelar</Link>
+                <Link className="btn-voltar" to='/Lista'>Cancelar</Link>
                 </form>
 
                
